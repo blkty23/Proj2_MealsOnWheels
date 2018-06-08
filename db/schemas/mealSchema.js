@@ -1,12 +1,13 @@
 const Schema = require('mongoose').Schema
+const customerSchema = require('./customerSchema')
 
 const mealSchema = new Schema({
     name: String,
     description: String,
     img: String,
-    consumer: [Array],
+    consumers: [customerSchema],
     price: Number,
-    qty: Number
+    qty: Number,
 })
 
 module.exports = mealSchema

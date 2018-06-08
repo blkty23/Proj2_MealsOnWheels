@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
-const Homework = require('../models/Homework')
-const Comment = require('../models/Comment')
+const Cook = require('../models/Cook')
+const Customer = require('../models/Customer')
+const Meal = require('../models/Meal')
 
 // Connect to Database
 mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
@@ -11,58 +12,75 @@ mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
     console.log('ERROR', err)
   })
 
-// Remove old Homework Data
-Homework.remove()
-  .then(() => {
-    const comment1 = new Comment({
-      body: 'hello',
-      submittedBy: 'coffee',
-      score: 3
+// Remove old Customers Data
+Customer.remove().then(() => {
+  const customer1 = new Customer({
+    name: "John",
+    email: "john.doe@gmail.com",
+    DOB: 10011988,
+    zip: 30314,
+    phone: 7708990359
+  })
+
+  const customer2 = new Customer({
+    name: "Tony",
+    email: "tony.doe@gmail.com",
+    DOB: 10011988,
+    zip: 30314,
+    phone: 4046990359
+  })
+
+  // Remove old Meals Data
+  Meal.remove().then(() => {
+    const meal1 = new Meal({
+      name: "Jambalya",
+      description: "Blackened chicken breast, shrimp, chicken-andouille sausage, bell peppers, white onions and tomatoes in a spicy sauce. Served over rice pilaf.",
+      img:  "jambalya.jpg",
+      consumers: [customer1, customer2],
+      price: 14.45,
+      qty: 1
     })
 
-    const comment2 = new Comment({
-      body: 'bywe',
-      submittedBy: 'fdsafsf',
-      score: 3
+    const meal2 = new Meal({
+      name: "Jambalya",
+      description: "Blackened chicken breast, shrimp, chicken-andouille sausage, bell peppers, white onions and tomatoes in a spicy sauce. Served over rice pilaf.",
+      img:  "jambalya.jpg",
+      consumers: [customer1, customer2],
+      price: 14.45,
+      qty: 1
     })
 
-    // create new test Homework data
-    const homework1 = new Homework({
-      title: 'Pirates Read/Create',
-      description: 'pirates',
-      subject: 'express',
-      createdBy: 'bob',
-      comments: [ comment1, comment2 ]
-    })
-    const homework2 = new Homework({
-      title: 'Pirates update/dleete',
-      description: 'more pirates',
-      subject: 'express',
-      createdBy: 'joof',
-      comments: [ comment1, comment2 ]
-    })
-    const homework3 = new Homework({
-      title: 'Pizza Express',
-      description: 'PIZZA',
-      subject: 'React',
-      createdBy: 'sal',
-      comments: [ comment1, comment2 ]
-    })
-    const homework4 = new Homework({
-      title: 'final project',
-      description: 'everything',
-      subject: 'rails',
-      createdBy: 'bryan',
-      comments: [ comment1, comment2 ]
-    })
+    // Remove old Cook Data
+    Cook.remove().then(() => {
+      const cook1 = new Cook({
+        name: "Ty's Cajun Cuisine",
+        specialty: "Cajun",
+        location: "East Atlanta",
+        restaurant_desc: "Food truck company specializing in cajun cuisine",
+        food_pricepoint: 12,
+        meals: [meal1, meal2]
+      })
 
-    const homeworks = [ homework1, homework2, homework3, homework4 ]
+      const cook2 = new Cook({
+        name: "Q-Time",
+        specialty: "Soul Food",
+        location: "Southwest Atlanta",
+        restaurant_desc: "Cafeteria-style Southern restaurant serving ribs, catfish & ham hocks with tons of sides since 1979.",
+        food_pricepoint: 9,
+        meals: [meal1, meal2]
+      })
+
+      const cooks = [ cook1, cook2]
+      const consumers = [ customer1, customer2]
+      const meals = [meal1, meal2]
 
     // save test data
-    return Homework.insertMany(homeworks)
+      return Customer.insertMany(consumers)
+      return Meal.insertMany(meals)
+      return Cook.insertMany(cooks)
+    })
   })
-  .then(() => {
-
-    // close the database
-    mongoose.connection.close()
-  })
+}).then(() => {
+  // close the database
+  mongoose.connection.close()
+})
