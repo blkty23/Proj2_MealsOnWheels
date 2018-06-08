@@ -3,6 +3,9 @@ const Cook = require('../models/Cook')
 const Customer = require('../models/Customer')
 const Meal = require('../models/Meal')
 
+
+
+
 // Connect to Database
 mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
   .then(() => {
@@ -11,6 +14,35 @@ mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
   .catch((err) => {
     console.log('ERROR', err)
   })
+
+// create new test Customer data
+const customer = new Customer({
+   name: "John",
+   email: "john.doe@gmail.com",
+   DOB: 10011988,
+   zip: 30314,
+   phone: 7708990359
+   })
+
+// create new test Meal data
+// const meal = new Meal({
+//   name: "Jambalya",
+//   description: "Blackened chicken breast, shrimp, chicken-andouille sausage, bell peppers, white onions and tomatoes in a spicy sauce. Served over rice pilaf.",
+//   img:  "jambalya.jpg",
+//   consumers: [customer1, customer2],
+//   price: 14.45,
+//   qty: 1
+//   })
+
+// create new test Cook data
+// const cook = new Cook({
+//   name: "Ty's Cajun Cuisine",
+//   specialty: "Cajun",
+//   location: "East Atlanta",
+//   restaurant_desc: "Food truck company specializing in cajun cuisine",
+//   food_pricepoint: 12,
+//   meals: [meal1, meal2]
+//   })
 
 // Remove old Customers Data
 Customer.remove().then(() => {
@@ -70,9 +102,40 @@ Customer.remove().then(() => {
         meals: [meal1, meal2]
       })
 
+    // create new test Customer data
+    const customer = new Customer({
+        name: "John",
+        email: "john.doe@gmail.com",
+        DOB: 10011988,
+        zip: 30314,
+        phone: 7708990359
+      })
+
+// create new test Meal data
+    const meal = new Meal({
+        name: "Jambalya",
+        description: "Blackened chicken breast, shrimp, chicken-andouille sausage, bell peppers, white onions and tomatoes in a spicy sauce. Served over rice pilaf.",
+        img:  "jambalya.jpg",
+        consumers: [customer1, customer2],
+        price: 14.45,
+        qty: 1
+      })
+
+// create new test Cook data
+    const cook = new Cook({
+        name: "Ty's Cajun Cuisine",
+        specialty: "Cajun",
+        location: "East Atlanta",
+        restaurant_desc: "Food truck company specializing in cajun cuisine",
+        food_pricepoint: 12,
+        meals: [meal1, meal2]
+      })
+
       const cooks = [ cook1, cook2]
       const consumers = [ customer1, customer2]
       const meals = [meal1, meal2]
+
+    
 
     // save test data
       return Customer.insertMany(consumers)
