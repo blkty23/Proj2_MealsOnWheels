@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
-      res.render('homework/index', { listOfHomeworkAssignments: listOfHomeworkAssignments })
+      res.render('Cooks/index', { listOfCooks: listOfCooks })
     })
     .catch((err) => res.send(err))
 
@@ -21,50 +21,50 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('homework/new')
+  res.render('Cooks/new')
 })
 
 // CREATE Route
 router.post('/', (req, res) => {
-  const newHomework = req.body
-  Homework
-    .create(newHomework)
+  const newCook = req.body
+  Cook
+    .create(newCook)
     .then(() => {
-      res.redirect('/homework')
+      res.redirect('/cook')
     })
 })
 
 // SHOW Route
 router.get('/:id', (req, res) => {
-  Homework
+  Cook
     .findById(req.params.id)
-    .then((homeworkAssignment) => {
-      res.render('homework/show', { homeworkAssignment })
+    .then((ShowCook) => {
+      res.render('cook/show', { ShowCook })
     })
 })
 
 // EDIT Route
 router.get('/:id/edit', (req, res) => {
-  Homework
+  Cook
     .findById(req.params.id)
-    .then((banana) => {
-      res.render('homework/edit', { homeworkAssignment: banana })
+    .then((Company) => {
+      res.render('cook/edit', { ShowCook: Company })
     })
 })
 
 // UPDATE Route
 router.put('/:id', (req, res) => {
-  Homework.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-    res.redirect(`/homework/${req.params.id}`)
+  Cook.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
+    res.redirect(`/cook/${req.params.id}`)
   })
 })
 
 // DELETE Route
 router.delete('/:id', (req, res) => {
-  Homework.findByIdAndRemove(req.params.id)
+  Cook.findByIdAndRemove(req.params.id)
     .then(() => {
       console.log('Successfully Delete ')
-      res.redirect('/homework')
+      res.redirect('/cook')
     })
 })
 

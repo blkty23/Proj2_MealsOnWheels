@@ -1,0 +1,12 @@
+<h1>All Homeworks</h1>
+
+<ul>
+  {{#each listOfHomeworkAssignments}}
+  <li>
+    <a href="/homework/{{_id}}">
+      <p>{{title}} - {{createdBy}}</p>
+      <p>{{dueDate}}</p>
+    </a>
+  </li>
+  {{/each}}
+</ul>
