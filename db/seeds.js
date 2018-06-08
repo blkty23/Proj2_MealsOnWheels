@@ -16,13 +16,13 @@ mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
   })
 
 // create new test Customer data
-const customer = new Customer({
-   name: "John",
-   email: "john.doe@gmail.com",
-   DOB: 10011988,
-   zip: 30314,
-   phone: 7708990359
-   })
+// const customer = new Customer({
+//    name: "John",
+//    email: "john.doe@gmail.com",
+//    DOB: 10011988,
+//    zip: 30314,
+//    phone: 7708990359
+//    })
 
 // create new test Meal data
 // const meal = new Meal({
