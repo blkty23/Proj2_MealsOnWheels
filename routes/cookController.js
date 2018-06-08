@@ -1,15 +1,15 @@
 const express = require('express')
 const router = express.Router()
-const Homework = require('../models/Homework')
+const Cook = require('../models/Cook')
 
 /* GET homework listing. */
 // localhost/homework
 router.get('/', (req, res, next) => {
 
-  // Find all Homeworks
-  Homework
+  // Find all Cooks
+  Cook
     .find()
-    .then((listOfHomeworkAssignments) => {
+    .then((listOfCooks) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
