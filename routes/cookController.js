@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
-      res.render('Cooks/index', { listOfCooks: listOfCooks })
+      res.render('cooks/index', { listOfCooks: listOfCooks })
     })
     .catch((err) => res.send(err))
 
@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('Cooks/new')
+  res.render('cooks/new')
 })
 
 // CREATE Route
@@ -30,7 +30,7 @@ router.post('/', (req, res) => {
   Cook
     .create(newCook)
     .then(() => {
-      res.redirect('/cook')
+      res.redirect('/cooks')
     })
 })
 

@@ -1,12 +1,18 @@
-<h1>All Homeworks</h1>
+<h1>All Cooks</h1>
 
 <ul>
-  {{#each listOfHomeworkAssignments}}
+  {{#each listOfCooks}}
   <li>
-    <a href="/homework/{{_id}}">
-      <p>{{title}} - {{createdBy}}</p>
-      <p>{{dueDate}}</p>
+    <a href="/cook/{{_id}}">
+      <p>{{name}}</p>
+      <p>{{specialty}}</p>
+      <p>{{location}}</p>
+      <p>{{restaurant_desc}}</p>
+      <p>{{meals}}</p>
+      
     </a>
   </li>
   {{/each}}
 </ul>
+
+ 

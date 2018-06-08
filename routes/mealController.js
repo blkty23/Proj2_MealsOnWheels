@@ -7,13 +7,13 @@ const Homework = require('../models/Homework')
 router.get('/', (req, res, next) => {
 
   // Find all Homeworks
-  Homework
+  Meal
     .find()
-    .then((listOfHomeworkAssignments) => {
+    .then((listOfMeals) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
-      res.render('homework/index', { listOfHomeworkAssignments: listOfHomeworkAssignments })
+      res.render('meals/index', { listOfHomeworkAssignments: listOfHomeworkAssignments })
     })
     .catch((err) => res.send(err))
 
@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('homework/new')
+  res.render('meals/new')
 })
 
 // CREATE Route
