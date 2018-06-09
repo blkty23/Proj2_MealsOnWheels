@@ -1,0 +1,12 @@
+<h1>{{showMeal.name}}</h1>
+<h3>Cuisine Description: {{showMeal.description}}</h3>
+<p>Restaurant Location: {{showMeal.img}}</p>
+<p>Restaurant Description: {{showMeal.consumers}}</p>
+<p>Food Price: {{showMeal.price}}</p>
+<p>Restaurant Meals: {{showMeal.qty}}</p>
+
+<form action="/cook/{{showMeal._id}}?_method=DELETE" method="POST">
+  <button type="submit">Delete Meal</button>
+</form>
+
+  

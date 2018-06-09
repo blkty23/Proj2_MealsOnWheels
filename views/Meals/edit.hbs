@@ -1,0 +1,41 @@
+<h1>Edit {{showMeal.name}}</h1>
+
+<form action="/meal/{{h._id}}?_method=PUT" method="POST">
+  <div>
+    <label for="title">Meal Name</label>
+    <input type="text" name="title" value={{showMeal.name}} />
+  </div>
+  <div>
+    <label for="subject">Meal Description</label>
+    <textarea 
+    type="text" 
+    name="description" 
+    >{{showMeal.description}}</textarea>
+  </div>
+  <div>
+    <label for="subject">Meal Image</label>
+    <input type="text" name="subject" value={{showMeal.img}} />
+  </div>
+  <div>
+    <label for="subject">Customers</label>
+    <input type="text" name="createdBy" value={{showMeal.consumers}} />
+  </div>
+  <div>
+    <label for="subject">Meal Price</label>
+    <input type="text" name="createdBy" value={{showMeal.price}} />
+  </div>
+  <div>
+    <label for="subject">Meal Purchases</label>
+    <input type="text" name="createdBy" value={{showMeal.qty}} />
+  </div>
+  <button type="submit">Update</button>
+</form>
+
+name: String,
+    description: String,
+    img: String,
+    consumers: [customerSchema],
+    price: Number,
+    qty: Number,
+
+

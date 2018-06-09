@@ -26,11 +26,11 @@ router.get('/new', (req, res) => {
 
 // CREATE Route
 router.post('/', (req, res) => {
-  const newHomework = req.body
+  const newMeal = req.body
   Homework
-    .create(newHomework)
+    .create(newMeal)
     .then(() => {
-      res.redirect('/homework')
+      res.redirect('/meals')
     })
 })
 
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   Homework
     .findById(req.params.id)
     .then((homeworkAssignment) => {
-      res.render('homework/show', { homeworkAssignment })
+      res.render('meal/show', { homeworkAssignment })
     })
 })
 
@@ -48,14 +48,14 @@ router.get('/:id/edit', (req, res) => {
   Homework
     .findById(req.params.id)
     .then((banana) => {
-      res.render('homework/edit', { homeworkAssignment: banana })
+      res.render('meal/edit', { ShowMeal: banana })
     })
 })
 
 // UPDATE Route
 router.put('/:id', (req, res) => {
   Homework.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-    res.redirect(`/homework/${req.params.id}`)
+    res.redirect(`/meal/${req.params.id}`)
   })
 })
 
@@ -64,7 +64,7 @@ router.delete('/:id', (req, res) => {
   Homework.findByIdAndRemove(req.params.id)
     .then(() => {
       console.log('Successfully Delete ')
-      res.redirect('/homework')
+      res.redirect('/')
     })
 })
 

@@ -1,28 +1,32 @@
-<h1>Edit {{homeworkAssignment.title}}</h1>
+<h1>Edit {{showCook.name}}</h1>
 
-<form action="/homework/{{h._id}}?_method=PUT" method="POST">
+<form action="/cook/{{h._id}}?_method=PUT" method="POST">
   <div>
-    <label for="title">Homework Title</label>
-    <input type="text" name="title" value={{homeworkAssignment.title}} />
+    <label for="title">Restaurant Name</label>
+    <input type="text" name="title" value={{showCook.name}} />
   </div>
   <div>
-    <label for="description">Homework Description</label>
+    <label for="description">Restaurant Specialty</label>
     <textarea 
     type="text" 
     name="description" 
-    >{{homeworkAssignment.description}}</textarea>
+    >{{showCook.specialty}}</textarea>
   </div>
   <div>
-    <label for="subject">Homework subject</label>
-    <input type="text" name="subject" value={{homeworkAssignment.subject}} />
+    <label for="subject">Restaurant Location</label>
+    <input type="text" name="subject" value={{showCook.location}} />
   </div>
   <div>
-    <label for="createdBy">Homework createdBy</label>
-    <input type="text" name="createdBy" value={{homeworkAssignment.createdBy}} />
+    <label for="subject">Restaurant Description</label>
+    <input type="text" name="createdBy" value={{showCook.restaurant_desc}} />
   </div>
   <div>
-    <label for="dueDate">Homework dueDate</label>
-    <input type="date" name="dueDate" value={{homeworkAssignment.dueDate}} />
+    <label for="subject">Food Price</label>
+    <input type="date" name="dueDate" value={{showCook.food_pricepoint}} />
   </div>
   <button type="submit">Update</button>
 </form>
+
+
+
+

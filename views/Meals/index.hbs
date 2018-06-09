@@ -1,0 +1,17 @@
+<h1>Meals</h1>
+
+<ul>
+  {{#each listOfMeals}}
+  <li>
+    <a href="/meal/{{_id}}">
+      <p>{{name}}</p>
+      <p>{{description}}</p>
+      <p>{{img}}</p>
+      <p>{{consumers}}</p>
+      <p>{{price}}</p>
+      <p>{{qty}}</p>
+    </a>
+  </li>
+  {{/each}}
+</ul>
+
