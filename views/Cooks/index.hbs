@@ -3,16 +3,25 @@
 <ul>
   {{#each listOfCooks}}
   <li>
-    <a href="/cook/{{_id}}">
+    <a href="/cooks/{{_id}}">
       <p>{{name}}</p>
       <p>{{specialty}}</p>
       <p>{{location}}</p>
       <p>{{restaurant_desc}}</p>
-      <p>{{meals}}</p>
-      
+      {{!-- {{#each meals}}
+      <p>{{name}}</p>
+      <p>{{description}}</p>
+      <img src="{{img}}" alt=""> 
+      {{#each consumers}}
+      <p>{{name}}</p>
+      <p>{{email}}</p>
+      <p>{{DOB}}</p>
+      <p>{{zip}}</p>
+      {{/each}}
+      <p>{{price}}</p>
+      <p>{{qty}}</p>
+      {{/each}} --}}
     </a>
   </li>
   {{/each}}
 </ul>
-
- 

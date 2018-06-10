@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
-      res.render('cooks/index', { listOfCooks: listOfCooks })
+      res.render('Cooks/index', { listOfCooks: listOfCooks })
     })
     .catch((err) => res.send(err))
 
@@ -21,7 +21,7 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('cooks/new')
+  res.render('Cooks/new')
 })
 
 // CREATE Route
@@ -38,8 +38,8 @@ router.post('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Cook
     .findById(req.params.id)
-    .then((ShowCook) => {
-      res.render('cook/show', { ShowCook })
+    .then((showCook) => {
+      res.render('Cooks/show', { showCook })
     })
 })
 
@@ -48,14 +48,14 @@ router.get('/:id/edit', (req, res) => {
   Cook
     .findById(req.params.id)
     .then((Company) => {
-      res.render('cook/edit', { ShowCook: Company })
+      res.render('Cooks/edit', { showCook: Company })
     })
 })
 
 // UPDATE Route
 router.put('/:id', (req, res) => {
   Cook.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(() => {
-    res.redirect(`/cook/${req.params.id}`)
+    res.redirect(`/cooks/${req.params.id}`)
   })
 })
 
@@ -64,7 +64,7 @@ router.delete('/:id', (req, res) => {
   Cook.findByIdAndRemove(req.params.id)
     .then(() => {
       console.log('Successfully Delete ')
-      res.redirect('/cook')
+      res.redirect('/cooks')
     })
 })
 

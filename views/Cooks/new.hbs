@@ -1,29 +1,33 @@
 <h1>Create New Cook</h1>
 
-<form action="/cook" method="POST">
+<form action="/cooks" method="POST">
   <div>
-    <label for="title">Restaurant Name</label>
-    <input type="text" name="title" placeholder="Restaurant Name" />
+    <label for="name">Restaurant Name</label>
+    <input type="text" name="name" placeholder="Restaurant Name" />
   </div>
   <div>
-    <label for="description">Restaurant Specialty</label>
+    <label for="specialty">Restaurant Specialty</label>
     <textarea 
     type="text" 
-    name="description" 
+    name="specialty" 
     placeholder="Restaurant Specialty"></textarea>
   </div>
   <div>
-    <label for="subject">Restaurant Location</label>
-    <input type="text" name="subject" placeholder="Restaurant Location" />
+    <label for="location">Restaurant Location</label>
+    <input type="text" name="location" placeholder="Restaurant Location" />
   </div>
   <div>
-    <label for="subject">Food Price</label>
-    <input type="text" name="subject" placeholder="Price Point" />
+    <label for="restaurant_desc">Restaurant Description</label>
+    <textarea 
+    type="text" 
+    name="restaurant_desc" 
+    placeholder="Restaurant Specialty"></textarea>
   </div>
   <div>
-    <label for="subject">Meals</label>
-    <input type="text" name="subject" placeholder="Meals" />
+    <label for="food_pricepoint">Food Price</label>
+    <input type="text" name="food_pricepoint" placeholder="Price Point" />
   </div>
+
   <button type="submit">Save New Restaurant</button>
 </form>
 
