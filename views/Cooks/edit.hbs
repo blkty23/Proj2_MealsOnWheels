@@ -1,28 +1,36 @@
 <h1>Edit {{showCook.name}}</h1>
 
-<form action="/cook/{{h._id}}?_method=PUT" method="POST">
+<form action="/cooks/{{showCook._id}}?_method=PUT" method="POST">
+
   <div>
-    <label for="title">Restaurant Name</label>
-    <input type="text" name="title" value={{showCook.name}} />
+    <label for="name">Restaurant Name</label>
+    <input type="text" name="name" value="{{showCook.name}}" />
   </div>
+
   <div>
-    <label for="description">Restaurant Specialty</label>
+    <label for="specialty">Restaurant Specialty</label>
     <textarea 
     type="text" 
-    name="description" 
+    name="specialty" 
     >{{showCook.specialty}}</textarea>
   </div>
+
   <div>
-    <label for="subject">Restaurant Location</label>
-    <input type="text" name="subject" value={{showCook.location}} />
+    <label for="location">Restaurant Location</label>
+    <input type="text" name="location" value="{{showCook.location}}" />
   </div>
+
   <div>
-    <label for="subject">Restaurant Description</label>
-    <input type="text" name="createdBy" value={{showCook.restaurant_desc}} />
+    <label for="restaurant_desc">Restaurant Description</label>
+    <textarea 
+    type="text" 
+    name="restaurant_desc" 
+    >{{showCook.restaurant_desc}}</textarea>
   </div>
+
   <div>
-    <label for="subject">Food Price</label>
-    <input type="date" name="dueDate" value={{showCook.food_pricepoint}} />
+    <label for="food_pricepoint">Food Price</label>
+    <input type="number" name="food_pricepoint" value="{{showCook.food_pricepoint}}" />
   </div>
   <button type="submit">Update</button>
 </form>
