@@ -18,11 +18,10 @@ Deployed Online_Met
 #Bitballoon:
 wonderful-hermann-e79b54.bitballoon.com
 #Trello:
-https://trello.com/b/Ha8g1XQG/proj1hangman
+https://trello.com/b/FnhLyyJT/proj2mealsonwheels
 #Wireframe:
 TyroneGA_p1/Proj1_Hangman/images
 #version2:
-In version2 of HIP_HOP_Hangman I would like to develope the Hints for each word. Also, it would be really cool if the hangman image was Tupac Makevelie hanging on the cross.  This effort would require some image manipulation using photoshop.
+In version2 of MealsOnWheels, it would really nice to have a many-to-many model.
 #problems:
-The biggest problem on this project was time management. Initially, I was under the impression, the class would be given a week to complete the project.  However, we were given three and a half days.  I also struggled with DOM manipulation because I was behind on class material because of various reasons. The keyboard button does not push the letter into the array and/or display in the DOM.
-With more time this feature would surely be implemented/
+The biggest problem on this project was understanding the material. Initially, I did not understand the material completely, and there was a delay in getting all the Schemas, Views, Routes, and Controllers.
