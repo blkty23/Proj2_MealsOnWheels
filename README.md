@@ -15,13 +15,17 @@ ERD_Met
 Clean CSS/HTML_Met
 Deployed Online_Met
 
-#Bitballoon:
-wonderful-hermann-e79b54.bitballoon.com
+#Heroku:
+https://arcane-brushlands-58363.herokuapp.com/cooks
+
 #Trello:
 https://trello.com/b/FnhLyyJT/proj2mealsonwheels
+
 #Wireframe:
-TyroneGA_p1/Proj1_Hangman/images
+/Users/cbatlstudent16cycle1/Desktop/ga/wdi/projects/project2/Proj2_MealsOnWheels/public/images
+
 #version2:
-In version2 of MealsOnWheels, it would really nice to have a many-to-many model relationship.  This would allow the Cook User and the Customer user to interface and communicate meals that the Customer would like. 
+In version2 of MealsOnWheels, it would really nice to have a many-to-many model relationship.  This would allow the Cook User and the Customer user to interface and communicate meals that the Customer would like.
+ 
 #problems:
-The biggest problem on this project was understanding the material. Initially, I did not understand the material completely, and there was a delay in getting all the Schemas, Views, Routes, and Controllers.  By the time I got everything set up and related properly, I was emotionally exhausted.  I believe with more time, I can 
+The biggest problem on this project was understanding the material (ei. Mongo, Handlebars, Express). Initially, I did not understand the material completely, and there was a delay in getting all the Schemas, Views, Routes, and Controllers.  By the time I got everything set up and related properly, I was emotionally exhausted.  I believe with more time, I can 
