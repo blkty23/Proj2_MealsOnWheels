@@ -1,28 +1,15 @@
 <h1>All Cooks</h1>
 
-<button type="submit"><a href="/cooks/new">Create Cook</a></button>
+<button type="submit">
+  <a href="/cooks/new">Create Cook</a>
+</button>
 
 <ul>
   {{#each listOfCooks}}
-   <li>
-     <a href="/cooks/{{_id}}">
-       <p>{{name}}</p>
--      {{!-- <p>{{specialty}}</p>
-+      <p>{{specialty}}</p>
-       <p>{{location}}</p>
-       <p>{{restaurant_desc}}</p> --}}
--      {{!-- {{#each meals}}
-+      {{{#each meals}}
-       <p>{{name}}</p>
-       <p>{{description}}</p>
-       <img src="{{img}}" alt=""> 
-@@ -22,7 +22,7 @@
-       {{/each}}
-       <p>{{price}}</p>
-       <p>{{qty}}</p>
--      {{/each}} --}}
-+      {{/each}}
-     </a>
-   </li>
-   {{/each}}
+  <li>
+    <a href="/cooks/{{_id}}">
+      <p>{{name}}</p>
+    </a>
+  </li>
+  {{/each}}
 </ul>
