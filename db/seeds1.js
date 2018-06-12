@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose')
 const Cook = require('../models/Cook')
 const Customer = require('../models/Customer')
@@ -5,7 +6,7 @@ const Meal = require('../models/Meal')
 
 
 // Connect to Database
-mongoose.connect('mongodb://localhost/Proj2_MealsOnWheels')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => {
         console.log('connected to mongoDB')
     })
