@@ -29,19 +29,28 @@ The objectives of this project are to:
 - morgan
 - nodemon
 
+##The approach was taken:
+Started by creating ERD, Wireframes, Trello.  Then I created my checklist, models and schemas. Lastly, I created my seeds,then created views, and worked on routes. My front styling came absolutely last. With more time and consultation with the UX students, this app could really prove to be useful.
+
+
+
 ##Heroku:
 https://arcane-brushlands-58363.herokuapp.com/cooks
 
 ##Trello:
 https://trello.com/b/FnhLyyJT/proj2mealsonwheels
 
+##ERD:
+https://github.com/blkty23/Proj2_MealsOnWheels/blob/master/public/images/ERD.jpg
+
 ##Wireframe:
-/Users/cbatlstudent16cycle1/Desktop/ga/wdi/projects/project2/Proj2_MealsOnWheels/public/images
+https://github.com/blkty23/Proj2_MealsOnWheels/blob/master/public/images/wireframe.jpg
 
 ##version2:
-In version2 of MealsOnWheels, it would really nice to have a many-to-many model relationship.  This would allow the Cook User and the Customer user to interface and communicate meals that the Customer would like.
+In version2 of MealsOnWheels, it would really nice to have a many-to-many model relationship.  This would allow the Cook User and the Customer user to interface and communicate meals that the Customer would like.  I would also like to incorporate user authentication in the next version. Images of food.
 
 ##problems:
 The biggest problem on this project was understanding the material (ei. Mongo, Handlebars, Express). Initially, I did not understand the material completely, and there was a delay in getting all the Schemas, Views, Routes, and Controllers to communicate.  By the time I got everything set up and related properly, I was emotionally exhausted.  I believe with more time, I can develope full CRUD for each model leve.
 
 ##Portfolio Link
+Not Applicable. Instuctor stated no points would be deducted.
