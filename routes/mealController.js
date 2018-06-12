@@ -1,6 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const mealSchema = require('./mealSchema')
+const Meal = mongoose.model('meal', mealSchema)
+
 
 
 /* GET Cook listing. */
@@ -14,7 +16,7 @@ router.get('/', (req, res, next) => {
 
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
-      res.render('meals/index', { listOfMeals: listOfMeals })
+      res.render('Meals/index', { listOfMeals: listOfMeals })
     })
     .catch((err) => res.send(err))
 
@@ -22,13 +24,13 @@ router.get('/', (req, res, next) => {
 
 // NEW Route
 router.get('/new', (req, res) => {
-  res.render('meals/new')
+  res.render('Meals/new')
 })
 
 // CREATE Route
 router.post('/', (req, res) => {
   const newMeal = req.body
-  Homework
+  Meal
     .create(newMeal)
     .then(() => {
       res.redirect('/meals')
@@ -37,10 +39,10 @@ router.post('/', (req, res) => {
 
 // SHOW Route
 router.get('/:id', (req, res) => {
-  Homework
+  Meal
     .findById(req.params.id)
-    .then((homeworkAssignment) => {
-      res.render('meal/show', { homeworkAssignment })
+    .then((ShowMeal) => {
+      res.render('Meals/show', { ShowMeal })
     })
 })
 
@@ -49,7 +51,7 @@ router.get('/:id/edit', (req, res) => {
   Homework
     .findById(req.params.id)
     .then((banana) => {
-      res.render('meal/edit', { ShowMeal: banana })
+      res.render('Meals/edit', { ShowMeal: banana })
     })
 })
 
