@@ -30,7 +30,9 @@ The objectives of this project are to:
 - nodemon
 
 ##The approach was taken:
-Started by creating ERD, Wireframes, Trello.  Then I created my checklist, models and schemas. Lastly, I created my seeds,then created views, and worked on routes. My front styling came absolutely last. With more time and consultation with the UX students, this app could really prove to be useful.
+Started by creating ERD, Wireframes, Trello.  Then I created my checklist, models and schemas. Lastly, I created my seeds,then created views, and worked on routes. My front styling came absolutely last. With more time and consultation with the UX students, this app could really prove to be useful. See link below.
+
+https://github.com/blkty23/Proj2_MealsOnWheels/blob/master/public/images/Approach.jpg
 
 
 
