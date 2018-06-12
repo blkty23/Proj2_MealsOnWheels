@@ -1,14 +1,15 @@
 <h1>All Cooks</h1>
-<a href="/cooks/new">Create Cook</a>
+{{!-- <a href="/cooks/new">Create Cook</a> --}}
+<button type="submit"><a href="/cooks/new">Create Cook</a></button>
 
 <ul>
   {{#each listOfCooks}}
   <li>
     <a href="/cooks/{{_id}}">
       <p>{{name}}</p>
-      <p>{{specialty}}</p>
+      {{!-- <p>{{specialty}}</p>
       <p>{{location}}</p>
-      <p>{{restaurant_desc}}</p>
+      <p>{{restaurant_desc}}</p> --}}
       {{!-- {{#each meals}}
       <p>{{name}}</p>
       <p>{{description}}</p>
